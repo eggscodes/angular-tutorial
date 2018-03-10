@@ -1,0 +1,7 @@
+build:
+    commands:
+      - echo Build started on `date`
+      - npm install -g @angular/cli
+      - npm install
+      - ng build
+      - aws s3 cp dist s3://eggscodes-angular-tutorial/ --recursive
